@@ -29,13 +29,16 @@ type OperatorSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Operator. Edit operator_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Size     int32  `json:"size"`
+	Image    string `json:"image"`
+	Response string `json:"response"`
 }
 
 // OperatorStatus defines the observed state of Operator
 type OperatorStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Nodes []string `json:"nodes"`
 }
 
 //+kubebuilder:object:root=true
